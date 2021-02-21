@@ -36,7 +36,7 @@ namespace Calculator_week1
                             break;
                     }
                     Console.WriteLine("ok, quit or another math game? (q to quit)");
-                    if (char.Parse(Console.ReadLine()) == 'q') 
+                    if (char.Parse(Console.ReadLine().ToLower()) == 'q') 
                         System.Environment.Exit(1); 
                 }
                 catch
@@ -71,7 +71,6 @@ namespace Calculator_week1
                     Console.WriteLine($"Sum is (now): {sum}. Give me a letter to quit.");
                 }
             }
-
             static void Subtraction()
             {
                 Console.WriteLine("Subtraction is lots of fun! ");
