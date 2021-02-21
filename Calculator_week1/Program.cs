@@ -36,8 +36,10 @@ namespace Calculator_week1
                             break;
                     }
                     Console.WriteLine("ok, quit or another math game? (q to quit)");
-                    if (char.Parse(Console.ReadLine().ToLower()) == 'q') 
-                        System.Environment.Exit(1); 
+                    if (char.Parse(Console.ReadLine().ToLower()) == 'q')
+                    {
+                        keepAlive = false;
+                    }
                 }
                 catch
                 {
