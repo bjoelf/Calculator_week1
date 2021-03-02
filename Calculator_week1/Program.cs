@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calculator_week1
+namespace Calculator_week3
 {
     class Program
     {
@@ -17,8 +17,8 @@ namespace Calculator_week1
                     switch (assigmentChoice)
                     {
                         case 'A':
-                            //Addition();
-                            AdditionLoop();
+                            Addition();
+                            //AdditionLoop();
                             break;
                         case 'S':
                             //Subtraction();
@@ -57,7 +57,8 @@ namespace Calculator_week1
                 Console.WriteLine("Addition is fun, lets do it! ");
                 double userInput1 = AskUserForInput();
                 double userInput2 = AskUserForInput("another number");
-                double sum = userInput1 + userInput2;
+                //double sum = userInput1 + userInput2;
+                double sum = Calculator.Addition(userInput1, userInput2);
                 Console.WriteLine($"Sum is: {sum}");
             }
             static void AdditionLoop()
@@ -78,7 +79,7 @@ namespace Calculator_week1
                 Console.WriteLine("Subtraction is lots of fun! ");
                 double userInput1 = AskUserForInput();
                 double userInput2 = AskUserForInput("a number to subtract from the first number");
-                double sum = userInput1 - userInput2;
+                double sum = Calculator.Addition(userInput1, userInput2);
                 Console.WriteLine($"Sum is: {sum}");
             }
             static void SubtractionLoop()
@@ -99,7 +100,8 @@ namespace Calculator_week1
             {
                 double userInput1 = AskUserForInput();
                 double userInput2 = AskUserForInput("a number to multiply with the first number");
-                double sum = userInput1 * userInput2;
+                //double sum = userInput1 * userInput2;
+                double sum = Calculator.Multiplying(userInput1, userInput2);
                 Console.WriteLine($"Product is: {sum}");
             }
             static void Division()
@@ -108,7 +110,8 @@ namespace Calculator_week1
                 double userInput2 = AskUserForInput("a number as denominator. Please observe this number must not be ZERO!");
                 if (userInput2 != 0)
                 {
-                    double q = userInput1 / userInput2;
+                    double q = Calculator.Division(userInput1, userInput2);
+                    //double q = userInput1 / userInput2;
                     Console.WriteLine($"Quota is: {q}");
                 }
                 else
