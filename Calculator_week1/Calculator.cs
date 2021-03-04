@@ -50,7 +50,7 @@ namespace Calculator_week3
         }
         public static double Multiplying(double userInput1, double userInput2)
         {
-            double prod = userInput1 / userInput2; ;
+            double prod = userInput1 * userInput2; ;
             return prod;
         }
         public static double Division(double userInput1, double userInput2)
