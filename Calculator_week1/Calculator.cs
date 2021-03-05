@@ -23,16 +23,31 @@ namespace Calculator_week3
         public static double Addition(double[] userInput1)
         {
             double sum = 0;
-            foreach (double item in userInput1)
+            try
             {
-                sum = sum + item;
+                foreach (double item in userInput1)
+                {
+                    sum = sum + item;
+                }
+                return sum;
             }
-            return sum;
+            catch
+            {
+                return sum;
+            }
         }
         public static double Subtraction(double userInput1, double userInput2)
         {
-            double sum = userInput1 - userInput2;
-            return sum;
+            double sum = 0;
+            try
+            {
+                sum = userInput1 - userInput2;
+                return sum;
+            }
+            catch
+            {
+                return sum;
+            }
         }
         /// <summary>
         /// Overloaded, accepting array input
@@ -42,11 +57,18 @@ namespace Calculator_week3
         public static double Subtraction(double[] userInput)
         {
             double sum = 0;
-            foreach (double item in userInput)
+            try
             {
-                sum = sum - item;
+                foreach (double item in userInput)
+                {
+                    sum = sum - item;
+                }
+                return sum;
             }
-            return sum;
+            catch
+            {
+                return sum;
+            }
         }
         public static double Multiplying(double userInput1, double userInput2)
         {

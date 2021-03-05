@@ -3,7 +3,7 @@ using Calculator_week3;
 using System.Diagnostics;
 
 namespace XUnitTest_Calculator
-{
+{ 
     public class UnitTest1
     {
         [Fact]
@@ -81,5 +81,19 @@ namespace XUnitTest_Calculator
             Assert.Equal(0, test);
         }
 
+        [Fact]
+        public void TestAdditionNullArray()
+        {
+            double[] toMethod = null;
+            double test = Calculator.Addition(toMethod);
+            Assert.Equal(0, test);
+        }
+        [Fact]
+        public void TestSubtractionNullArray()
+        {
+            double[] toMethod = null;
+            double test = Calculator.Subtraction(toMethod);
+            Assert.Equal(0, test);
+        }
     }
 }
